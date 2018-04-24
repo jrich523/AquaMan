@@ -1,0 +1,12 @@
+[
+  {
+		"name": "white",
+		"type": "button",
+		"pin": "P8_9"
+	},
+	{
+		"name": "blue",
+		"type": "button",
+		"pin": "p8_3"
+	}
+]

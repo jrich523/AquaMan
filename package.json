@@ -1,0 +1,11 @@
+{
+  "name": "aquaman",
+  "version": "1.0.0",
+  "description": "Aquaponics Management System",
+  "main": "aquaSystem.js",
+  "scripts": {
+    "start": "node ./aquaSystem.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
