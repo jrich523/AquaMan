@@ -4,7 +4,8 @@
   "description": "Aquaponics Management System",
   "main": "entry.js",
   "scripts": {
-    "start": "node ./entry.js"
+    "start": "node ./entry.js",
+    "pretest": "eslint --ignore-path .gitignore ."
   },
   "author": "",
   "license": "ISC"
