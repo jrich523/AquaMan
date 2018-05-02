@@ -15,18 +15,21 @@ module.exports = class LED {
         return this._state;
     }
     set state(v) {
-        if(v){
-            console.log(this.name + ': state Set high')
-            this._state = true
-            //bonescript: set high
-            b.digitalWrite(this.pin,b.HIGH)
-            
-        }
-        else{
-            console.log(this.name + ': state Set low')
-            this._state = false
-            //bonescript: low
-            b.digitalWrite(this.pin,b.LOW)
+        if(v != this._state){
+            if(v){
+                
+                console.log(this.name + ': state Set high')
+                this._state = true
+                //bonescript: set high
+                b.digitalWrite(this.pin,b.HIGH)
+                
+            }
+            else{
+                console.log(this.name + ': state Set low')
+                this._state = false
+                //bonescript: low
+                b.digitalWrite(this.pin,b.LOW)
+            }
         }
     }
     toggle() {
