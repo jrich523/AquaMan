@@ -1,5 +1,5 @@
 module.exports = function(devices){
-    //devices['usr3'].toggle()
+
     if(devices['white'].state)
     {
         console.log('switch active, light on')

@@ -1,38 +1,11 @@
 {
-	"devices": [{
-			"name": "white",
-			"type": "button",
-			"pin": "P8_9"
-		},
-		{
-			"name": "blue",
-			"type": "button",
-			"pin": "p8_10"
-		},
-		{
-			"name": "usr0",
-			"type": "LED",
-			"pin": "USR0"
-		},
-		{
-			"name": "usr1",
-			"type": "LED",
-			"pin": "USR1"
-		},
-		{
-			"name": "usr2",
-			"type": "LED",
-			"pin": "USR2"
-		},
-		{
-			"name": "usr3",
-			"type": "LED",
-			"pin": "USR3"
-		},
-		{
-			"name": "usr0",
-			"type": "LED",
-			"pin": "USR0"
-		}
+	"devices": [
+		{"name": "white","type": "button", "pin": "P8_9"  },
+		{"name": "blue", "type": "button", "pin": "p8_10" },
+		{"name": "usr0", "type": "LED",    "pin": "USR0"  },
+		{"name": "usr1", "type": "LED",    "pin": "USR1"  },
+		{"name": "usr2", "type": "LED",    "pin": "USR2"  },
+		{"name": "usr3", "type": "LED",    "pin": "USR3"  },
+		{"name": "usr0", "type": "LED",    "pin": "USR0"  }
 	]
 }
