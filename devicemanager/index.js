@@ -1,3 +1,8 @@
+/*
+for(var key in dict){
+  var value = dict[key];
+}
+*/
 
 module.exports = class DeviceManager {
     constructor(){
@@ -17,8 +22,6 @@ module.exports = class DeviceManager {
         d.forEach((i) => {
             this._NewDevice(i)
         })
-
-        //console.log(JSON.stringify(this.Devices))
     }
     
     //private, probably
@@ -27,8 +30,6 @@ module.exports = class DeviceManager {
     }
 
     LoadScripts(){
-        console.log('e: import scripts')
-
         //todo: move to file
 
         var data = {
@@ -45,17 +46,14 @@ module.exports = class DeviceManager {
     }
 
     Start(){
-        console.log('E: starting timer')
-        
         var script = this.Scripts['usrScript']
-        console.log(this.Devices)
         this._timer = setInterval( () => {
             script(this.Devices)
         }, 1000)
     }
 
     Stop() {
-        console.log('stopping timer')
         clearInterval(this._timer)
+        // clear device timers for input?
     }
 }
