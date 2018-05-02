@@ -16,14 +16,14 @@ module.exports = class LED {
     }
     set state(v) {
         if(v){
-            console.log('state Set high')
+            console.log(this.name + ': state Set high')
             this._state = true
             //bonescript: set high
             b.digitalWrite(this.pin,b.HIGH)
             
         }
         else{
-            console.log('state Set low')
+            console.log(this.name + ': state Set low')
             this._state = false
             //bonescript: low
             b.digitalWrite(this.pin,b.LOW)
