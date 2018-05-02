@@ -8,5 +8,12 @@
     "pretest": "eslint --ignore-path .gitignore ."
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrich523/aquaman.git"
+  },
+  "dependencies": {
+    "bonescript": "^0.6.3"
+  }
 }
