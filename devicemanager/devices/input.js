@@ -10,7 +10,7 @@ module.exports =  class Input {
         b.pinMode(this.pin,b.INPUT)
         b.attachInterrupt(this.pin, true, b.CHANGE, (x) =>{
             console.log(this.name + ': switch state updated to ' + this._value)
-            this.value = x
+            this._value = x
         })
         /*
         this._timer = setInterval( ()=> {
