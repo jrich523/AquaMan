@@ -7,7 +7,7 @@
 		{
 			"name": "blue",
 			"type": "button",
-			"pin": "p8_3"
+			"pin": "p8_10"
 		},
 		{
 			"name": "usr0",
