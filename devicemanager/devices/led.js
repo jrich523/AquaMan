@@ -1,4 +1,4 @@
-//var b = require('bonescript')
+var b = require('bonescript')
 
 module.exports = class LED {
     constructor(name,pin){
@@ -6,7 +6,7 @@ module.exports = class LED {
         this.pin = pin;
         this._state = false;
 
-        //b.pinMode(this.pin,b.OUTPUT)
+        b.pinMode(this.pin,b.OUTPUT)
 
         this.off() //default to off
     }
@@ -19,14 +19,14 @@ module.exports = class LED {
             console.log('state Set high')
             this._state = true
             //bonescript: set high
-            //b.digialWrite(this.pin,b.HIGH)
+            b.digitalWrite(this.pin,b.HIGH)
             
         }
         else{
             console.log('state Set low')
             this._state = false
             //bonescript: low
-            //b.digialWrite(this.pin,b.LOW)
+            b.digitalWrite(this.pin,b.LOW)
         }
     }
     toggle() {

@@ -13,5 +13,5 @@ var t = setInterval(function() {
 setTimeout(function() {
   clearInterval(t);
   DM.Stop();
-}, 3000);
+}, 10000);
 

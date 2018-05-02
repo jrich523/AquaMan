@@ -1,4 +1,4 @@
-//var b = require('bonescript');
+var b = require('bonescript');
 
 module.exports =  class Input {
     constructor(name,pin){
@@ -7,12 +7,17 @@ module.exports =  class Input {
         this._value=null;
         this._timer = null
         
-        //b.pinMode(this.pin,B.INPUT)
-        //b.attachInterrupt(this.pin, true, b.CHANGE, (x) =>{this.value = x})
+        b.pinMode(this.pin,b.INPUT)
+        b.attachInterrupt(this.pin, true, b.CHANGE, (x) =>{
+            console.log("switch state updated")
+            this.value = x
+        })
+        /*
         this._timer = setInterval( ()=> {
             this._value = !this.value
             console.log('input _value updated')
         }, 1000)
+        */
     }
 
     stop() {
