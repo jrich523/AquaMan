@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "route": "/tester",
+      "method": "GET",
+      "controller": "../controllers/tester/tester-controller"
+    },
+    {
+      "route": "/tester/:test_id",
+      "method": "GET",
+      "controller": "../controllers/tester/testerid-controller"
+    },
+    {
+      "route": "/devices",
+      "method": "GET",
+      "controller": "../controllers/devices/device"
+    },
+    {
+      "route": "/devicelibrary",
+      "method": "GET",
+      "controller": "../controllers/devicelibrary/devicelibrary"
+    }
+  ]
+}

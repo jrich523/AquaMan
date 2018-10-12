@@ -9,7 +9,7 @@ module.exports = class DeviceManager {
         this.isLoaded = false;
         this._timer= null;
         this.Devices = {};
-        this.Configuration = require('../deviceconfig.json')
+        this.Configuration = require('../config/deviceconfig.json')
         this.DeviceLibrary = require('./devices')
         this.Scripts = {};
 
@@ -18,6 +18,7 @@ module.exports = class DeviceManager {
     }
     
     LoadDevices(){
+        //todo: add a default state? or figure out how to tell the current state?
         var d = this.Configuration.devices
         d.forEach((i) => {
             this._NewDevice(i)
