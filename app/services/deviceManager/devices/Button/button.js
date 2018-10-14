@@ -1,4 +1,4 @@
-var Input = require('./input');
+var Input = require('../input');
 
 module.exports = class Button extends Input {
     constructor(name,pin){

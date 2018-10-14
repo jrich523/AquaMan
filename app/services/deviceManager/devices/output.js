@@ -1,47 +1,33 @@
-var b = require('bonescript')
+var b = require('bonescript');
 
-module.exports = class LED {
+module.exports =  class Output {
     constructor(name,pin){
-        this.name = name;
-        this.pin = pin;
-        this._state = false;
+        this.name=name;
+        this.pin=pin;
+        this._value=null;
 
         b.pinMode(this.pin,b.OUTPUT)
-
-        this.off() //default to off
+    
     }
-
     get state() {
-        return this._state;
+        return this._value;
     }
     set state(v) {
-        if(v != this._state){
+        if(v != this._value){
             if(v){
                 
                 console.log(this.name + ': state Set high')
-                this._state = true
+                this._value = true
                 //bonescript: set high
                 b.digitalWrite(this.pin,b.HIGH)
                 
             }
             else{
                 console.log(this.name + ': state Set low')
-                this._state = false
+                this._value = false
                 //bonescript: low
                 b.digitalWrite(this.pin,b.LOW)
             }
         }
     }
-    toggle() {
-        this.state = !this.state;
-    }
-
-    off() {
-        this.state = false
-    }
-
-    on() {
-        this.state = true
-    }
-    
 }
