@@ -7,13 +7,15 @@ module.exports = function(){
 
     function get(req, res, next) {
         
-        var info = []
-        Object.entries(dm.Devices).forEach(function(obj){ 
-            info.push({ 'name': obj[1].name , 'type' : obj[1].type});
+        const id = req.params.id
+  
+        const d = (dm.Devices[id])
+        console.log(d)
+        res.status(200).json({
+            name: d.name,
+            pin: d.pin,
+            value: d._value
         });
-    
-        console.log(info)
-        res.status(200).json(info);
     }
 
     function post(req, res, next){
@@ -23,11 +25,11 @@ module.exports = function(){
     }
 
     function put(req, res, next){
-        res.status(200).json({status:"put not implemented"})
+        res.status(200).json({status:"put ok"})
     }
 
     function del(req,res, next){
-        res.status(200).json({status:"del not implemented"})
+        res.status(200).json({status:"del ok"})
     }
 
     routeHandler.prototype = {

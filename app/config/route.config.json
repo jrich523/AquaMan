@@ -11,9 +11,14 @@
       "controller": "../controllers/tester/testerid-controller"
     },
     {
-      "route": "/devices",
+      "route": "/device",
       "method": "GET",
       "controller": "../controllers/devices/device"
+    },
+    {
+      "route": "/device/:id",
+      "method": "GET",
+      "controller": "../controllers/devices/device-id"
     },
     {
       "route": "/devicelibrary",
