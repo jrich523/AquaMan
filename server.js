@@ -1,3 +1,5 @@
+var dm = require('./app/services/deviceManager')
+
 var settingsConfig = require('./app/config/settings/settings-config');
 
 if(settingsConfig.settings.clusterEnabled === 1) {
