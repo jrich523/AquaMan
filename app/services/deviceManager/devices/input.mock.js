@@ -5,12 +5,12 @@ module.exports =  class Input {
         this.name=name;
         this.pin=pin;
         this.type=type;
-        this._value=null;
+        this.value=null;
         this._timer = null;
         
         this._timer = setInterval( ()=> {
-            this._value = !this.value
-            console.log('input _value updated for ' + this.name)
+            this.value = !this.value
+            //console.log('input _value updated for ' + this.name)
         }, 5000)
         
     }

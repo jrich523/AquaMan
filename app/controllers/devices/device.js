@@ -12,7 +12,6 @@ module.exports = function(){
             info.push({ 'name': obj[1].name , 'type' : obj[1].type});
         });
     
-        console.log(info)
         res.status(200).json(info);
     }
 
