@@ -10,7 +10,7 @@ module.exports = class DeviceManager {
         this._timer= null;
         this.Devices = {};
         this.Configuration = require('../config/deviceconfig.json')
-        this.DeviceLibrary = require('./devices')
+        this.DeviceLibrary = require('../app/services/deviceManager/devices')
         this.Scripts = {};
 
         //this.LoadConfig()

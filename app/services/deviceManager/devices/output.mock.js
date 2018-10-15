@@ -3,23 +3,23 @@ module.exports =  class Output {
         this.name=name;
         this.pin=pin;
         this.type=type;
-        this._value=null;
+        this.value=null;
     }
     get state() {
-        return this._value;
+        return this.value;
     }
     set state(v) {
-        if(v != this._value){
+        if(v != this.value){
             if(v){
                 
                 console.log(this.name + ': state Set high')
-                this._value = true
+                this.value = true
                 //bonescript: set high
                 
             }
             else{
                 console.log(this.name + ': state Set low')
-                this._value = false
+                this.value = false
                 //bonescript: low
             }
         }

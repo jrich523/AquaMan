@@ -14,7 +14,8 @@ module.exports = function(){
         res.status(200).json({
             name: d.name,
             pin: d.pin,
-            value: d._value
+            value: d.value,
+            state: d.state
         });
     }
 

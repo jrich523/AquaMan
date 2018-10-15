@@ -27,6 +27,8 @@ The configuration of devices is located in `/app/config/deviceconfig.json` and j
 
 The simplicity of device configuration is relient upon a "driver" so to speak, which all live in `/app/services/deviceManager/devices` each folder is a device type. Currently each device type inherits from the Input/Output classes so it should be very easy to create new devices.
 
+FIGURE OUT HOW TO MOCK CORRECTLY
+
 ## Scheduler
 
 Its not there yet, but i'll get there!

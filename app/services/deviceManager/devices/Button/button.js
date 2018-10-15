@@ -6,6 +6,6 @@ module.exports = class Button extends Input {
     }
 
     get state() {
-        return Boolean(this._value)
+        return Boolean(this.value)
     }
 }

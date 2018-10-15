@@ -8,15 +8,15 @@ module.exports = class LED extends Output {
     }
 
     toggle() {
-        this.state = !this.state;
+        this.value = !this.value;
     }
 
     off() {
-        this.state = false
+        this.value = false
     }
 
     on() {
-        this.state = true
+        this.value = true
     }
     
 }

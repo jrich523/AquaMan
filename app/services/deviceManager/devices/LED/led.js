@@ -4,22 +4,22 @@ var Output = require('../output')
 module.exports = class LED extends Output {
     constructor(name,pin){
         super(name,pin)
-        this._value = false;
+        this.value = false;
 
         this.off() //default to off
     }
 
     
     toggle() {
-        this.state = !this.state;
+        this.value = !this.value;
     }
 
     off() {
-        this.state = false
+        this.value = false
     }
 
     on() {
-        this.state = true
+        this.value = true
     }
     
 }

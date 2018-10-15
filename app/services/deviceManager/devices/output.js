@@ -4,27 +4,27 @@ module.exports =  class Output {
     constructor(name,pin){
         this.name=name;
         this.pin=pin;
-        this._value=null;
+        this.value=null;
 
         b.pinMode(this.pin,b.OUTPUT)
     
     }
     get state() {
-        return this._value;
+        return this.value;
     }
     set state(v) {
-        if(v != this._value){
+        if(v != this.value){
             if(v){
                 
                 console.log(this.name + ': state Set high')
-                this._value = true
+                this.value = true
                 //bonescript: set high
                 b.digitalWrite(this.pin,b.HIGH)
                 
             }
             else{
                 console.log(this.name + ': state Set low')
-                this._value = false
+                this.value = false
                 //bonescript: low
                 b.digitalWrite(this.pin,b.LOW)
             }
