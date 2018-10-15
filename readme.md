@@ -33,3 +33,10 @@ FIGURE OUT HOW TO MOCK CORRECTLY
 
 Its not there yet, but i'll get there!
 https://github.com/wahengchang/nodejs-cron-job-must-know
+
+
+
+## Notes
+
+Meteor for framework (replaces express? easy to have front/back on their own)
+Phusion Passanger or PM 2
