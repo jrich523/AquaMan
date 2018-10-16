@@ -7,6 +7,7 @@ module.exports = function(){
 
     function get(req, res) {
         
+        //show available actions
         res.status(200).json( { status: "get ok" });
     }
 

@@ -1,5 +1,4 @@
-var b = require('bonescript')
-var Output = require('../output')
+var Output = require('../_base/output')
 
 module.exports = class LED extends Output {
     constructor(name,pin){

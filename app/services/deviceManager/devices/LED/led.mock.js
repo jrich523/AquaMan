@@ -1,4 +1,4 @@
-var Output = require('../output.mock');
+var Output = require('../_base/output.mock');
 
 module.exports = class LED extends Output {
     constructor(name,pin){

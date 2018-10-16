@@ -5,27 +5,26 @@ module.exports = function(){
     function routeHandler() {
     }
 
-    function get(req, res, next) {
-        
-        var info = []
-        Object.entries(dm.Devices).forEach(function(obj){ 
-            info.push({ 'name': obj[1].name , 'type' : obj[1].type});
+    function get(req, res) {
+
+        var info = Object.entries(dm.Devices).map(function(device){
+            return { 'name': device[1].name , 'type' : device[1].type}
         });
-    
+
         res.status(200).json(info);
     }
 
-    function post(req, res, next){
+    function post(req, res){
         var body = req.body
 
         res.status(200).json(body)
     }
 
-    function put(req, res, next){
+    function put(req, res){
         res.status(200).json({status:"put not implemented"})
     }
 
-    function del(req,res, next){
+    function del(req,res){
         res.status(200).json({status:"del not implemented"})
     }
 
