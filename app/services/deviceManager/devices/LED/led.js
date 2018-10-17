@@ -1,24 +1,21 @@
-var Output = require('../_base/output')
+module.exports = function(name,pin){
+    var config = require('../../../../config/deviceconfig.json')
+    var adapter = require('../../adapters')(config.platform);
 
-module.exports = class LED extends Output {
-    constructor(name,pin){
-        super(name,pin)
-        this.value = false;
+    function LED(name,pin) {
+        this.name = name
+        this.pin = pin
+        this.type = 'LED' //todo: remove this
+        this.output = new adapter.output(pin)
 
-        this.off() //default to off
+        this.toggle = (function() {
+            output.value = !output.value
+        })
     }
 
-    
-    toggle() {
-        this.value = !this.value;
+    LED.prototype.toggle = function(){
+        this.value
     }
 
-    off() {
-        this.value = false
-    }
-
-    on() {
-        this.value = true
-    }
-    
+    return new LED(name,pin)
 }

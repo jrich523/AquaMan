@@ -1,8 +1,8 @@
-var Input = require('../_base/input');
+var Input = require('../../adapters/mock/input');
 
 module.exports = class Button extends Input {
     constructor(name,pin){
-        super(name,pin)
+        super(name,pin,'Button')
     }
 
     get state() {

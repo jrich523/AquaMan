@@ -1,0 +1,3 @@
+
+
+var input = require('./app')

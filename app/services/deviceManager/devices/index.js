@@ -1,6 +1,6 @@
 var deviceLibrary = {
-    button: require('./Button/button.mock'),
-    LED: require('./LED/led.mock')
+    button: require('./Button/Button'),
+    LED: require('./LED/LED')
 }
 
 module.exports = deviceLibrary

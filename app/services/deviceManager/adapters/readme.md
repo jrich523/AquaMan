@@ -5,5 +5,13 @@ Adapters are what interface the devices to the hardware. In this case because I 
 # Requirements
 If you want to make your own adapter for the pi for examples, here is what you'll need to build.
 
+> basic ideas
+> new adapter.input(name,pin) 
+
+
+
+input/output are the defaults and will be used for digital I/O
 
 # Functions/Methods
+
+Constructor(name,pin)
