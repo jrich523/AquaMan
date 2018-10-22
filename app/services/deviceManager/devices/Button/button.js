@@ -1,11 +1,11 @@
-var Input = require('../../adapters/mock/input');
+var Adapter = require('../../adapters');
 
-module.exports = class Button extends Input {
-    constructor(name,pin){
-        super(name,pin,'Button')
-    }
+module.exports = (name,pin) => {
 
-    get state() {
-        return Boolean(this.value)
+    let reader = Adapter.Read(name,pin)
+    const type = "Button"
+    const state = () => { 
+        reader.get();
     }
+    return { name,pin,type,state}
 }

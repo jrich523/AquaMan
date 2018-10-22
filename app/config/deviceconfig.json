@@ -1,5 +1,6 @@
 {
 	"platform" : "mock",
+	"latyout" : "should make the 'pin' a 'conn' and let it be a custom obj for adp",
 	"devices": [
 		{"name": "btn1","type": "button", "pin": "P8_9"  },
 		{"name": "btn2", "type": "button", "pin": "p8_10" },

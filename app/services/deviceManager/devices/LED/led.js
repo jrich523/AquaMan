@@ -1,21 +1,25 @@
+var Adapter = require('../../adapters');
+
 module.exports = function(name,pin){
-    var config = require('../../../../config/deviceconfig.json')
-    var adapter = require('../../adapters')(config.platform);
+    
 
-    function LED(name,pin) {
-        this.name = name
-        this.pin = pin
-        this.type = 'LED' //todo: remove this
-        this.output = new adapter.output(pin)
+    let writer = Adapter.Write(name,pin)
+    const type = "LED"
 
-        this.toggle = (function() {
-            output.value = !output.value
-        })
+    const state = () => { 
+        writer.get();
+    }
+    const on = () =>{
+        writer.on();
     }
 
-    LED.prototype.toggle = function(){
-        this.value
+    const off = () => {
+        writer.off()
     }
 
-    return new LED(name,pin)
+    const toggle = () => {
+        writer.toggle()
+    }
+
+    return {name,pin,type,state,on,off,toggle}
 }

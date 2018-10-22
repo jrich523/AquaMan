@@ -1,3 +1,10 @@
-// this should probably read and import the folders here
-// but for now, its manual because i can really only use one anyways
+var config = require('../../../config/deviceconfig.json')
+var platform = "./" + config.platform
+//test config.platform to make sure its there
+
+module.exports = {
+    Read: require('./read')(platform),
+    Write: require('./write')(platform)
+}
+
 
