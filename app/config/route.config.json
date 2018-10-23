@@ -21,6 +21,16 @@
       "controller": "../controllers/devices/device-id"
     },
     {
+      "route": "/device/:id/:action",
+      "method": "GET",
+      "controller": "../controllers/devices/device-id-action"
+    },
+    {
+      "route": "/device/:id/:action",
+      "method": "POST",
+      "controller": "../controllers/devices/device-id-action"
+    },
+    {
       "route": "/devicelibrary",
       "method": "GET",
       "controller": "../controllers/devicelibrary/devicelibrary"

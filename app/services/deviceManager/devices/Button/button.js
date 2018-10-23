@@ -5,7 +5,8 @@ module.exports = (name,pin) => {
     let reader = Adapter.Read(name,pin)
     const type = "Button"
     const state = () => { 
-        reader.get();
+        const rtn = reader.get();
+        return rtn;
     }
     return { name,pin,type,state}
 }

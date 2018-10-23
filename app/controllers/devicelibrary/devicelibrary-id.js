@@ -6,10 +6,9 @@ module.exports = function(){
     }
 
     function get(req, res) {
-        const id = req.params.id
-        const action = req.params.action
-        //show available actions
-        res.status(200).json( { status: "OK", Action: action });
+        
+        dm.DeviceLibrary.action
+        res.status(200).json( { status: "get ok" });
     }
 
     function post(req, res){

@@ -7,7 +7,8 @@ module.exports = function(name,pin){
     const type = "LED"
 
     const state = () => { 
-        writer.get();
+        const rtn = writer.get();
+        return rtn;
     }
     const on = () =>{
         writer.on();

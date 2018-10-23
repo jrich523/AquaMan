@@ -8,8 +8,12 @@ module.exports = function(){
     function get(req, res) {
 
         var info = Object.entries(dm.Devices).map(function(device){
+            const rtn = device[1].state();
             console.log(device)
-            return { 'name': device[1].name , 'type' : device, "state": device[1].state}
+            return  { 'name' : device[1].name, 
+                        'type' : device[1].type,
+                        'data' : rtn
+                    }
         });
 
         res.status(200).json(info);

@@ -14,4 +14,14 @@ input/output are the defaults and will be used for digital I/O
 
 # Functions/Methods
 
+
+## Read
 Constructor(name,pin)
+get()
+lastUpdate
+
+## Write
+Constructor(name,pin,defaultState)
+get
+on/off/toggle
+

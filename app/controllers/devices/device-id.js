@@ -10,6 +10,8 @@ module.exports = function () {
         const id = req.params.id
 
         const d = (dm.Devices[id])
+        const state = d.state();
+
         if (d === undefined) {
             res.status(404).send('Device not found')
         }
@@ -18,8 +20,7 @@ module.exports = function () {
             res.status(200).json({
                 name: d.name,
                 pin: d.pin,
-                value: d.value,
-                state: d.state
+                state: state
             });
         }
     }

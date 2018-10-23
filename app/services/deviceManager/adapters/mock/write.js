@@ -1,4 +1,4 @@
-module.exports = function (name, pin) {
+module.exports = function (name, pin, defaultState) {
 
     let value;
     let updateStamp = new Date();
@@ -22,8 +22,14 @@ module.exports = function (name, pin) {
     let lastUpdate = () => {
         return updateStamp
     }
-
-    off(); //default to off
+    
+    //Constructor actions
+    if (defaultState) {
+        on();
+    }
+    else {
+        off()
+    }
 
     return { name, pin, lastUpdate, get, on, off, toggle }
 }

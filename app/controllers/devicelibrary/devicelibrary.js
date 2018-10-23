@@ -5,7 +5,7 @@ function devicelibrary() {
 
 function get(req, res, next) {
   
-  var lib = dm.GetDeviceLibrary()
+  let lib = dm.DeviceLibrary
   console.log(Object.getOwnPropertyNames(lib))
   
   res.status(200).json(Object.getOwnPropertyNames(lib));
