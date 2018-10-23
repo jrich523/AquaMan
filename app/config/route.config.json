@@ -1,16 +1,6 @@
 {
   "routes": [
     {
-      "route": "/tester",
-      "method": "GET",
-      "controller": "../controllers/tester/tester-controller"
-    },
-    {
-      "route": "/tester/:test_id",
-      "method": "GET",
-      "controller": "../controllers/tester/testerid-controller"
-    },
-    {
       "route": "/device",
       "method": "GET",
       "controller": "../controllers/devices/device"
