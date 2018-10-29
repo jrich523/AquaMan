@@ -24,6 +24,11 @@
       "route": "/devicelibrary",
       "method": "GET",
       "controller": "../controllers/devicelibrary/devicelibrary"
+    },
+    {
+      "route": "/devicelibrary/:id",
+      "method": "GET",
+      "controller": "../controllers/devicelibrary/devicelibrary-id"
     }
   ]
 }

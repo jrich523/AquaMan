@@ -7,8 +7,12 @@ module.exports = function(){
 
     function get(req, res) {
         
-        dm.DeviceLibrary.action
-        res.status(200).json( { status: "get ok" });
+        const id = req.params.id
+        const lib = dm.DeviceLibrary
+        const type = lib[id]
+        
+        console.log(type.API)
+        res.status(200).json( type.API);
     }
 
     function post(req, res){

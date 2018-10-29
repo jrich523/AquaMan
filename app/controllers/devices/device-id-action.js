@@ -13,9 +13,13 @@ module.exports = function(){
     }
 
     function post(req, res){
-        var body = req.body
+        //var body = req.body
+        const id = req.params.id
+        const action = req.params.action
 
-        res.status(200).json(body)
+        let device = dm.Devices[id]
+        device[action]()
+        res.status(200).json({status: 'complete'})
     }
 
     function put(req, res){

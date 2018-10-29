@@ -4,6 +4,7 @@ module.exports = function (name, pin, defaultState) {
     let updateStamp = new Date();
 
     let on = function () {
+        console.log('writer - on')
         value = true;
     }
 
