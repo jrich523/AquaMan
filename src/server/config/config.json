@@ -1,0 +1,10 @@
+{
+    "clusterEnabled"    : 0,
+    "environment"       : "dev",
+    "hostName"          :  "0.0.0.0",
+    "masterPort"        : 3000,
+    "workerPort"        : 9000,
+    "queueLength"       : 10,
+    "serverName"        : "bb1",
+    "serverCores"       : 1
+}

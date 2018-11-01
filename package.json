@@ -2,10 +2,11 @@
   "name": "aquaman",
   "version": "1.0.0",
   "description": "Aquaponics Management System",
-  "main": "app.js",
+  "main": "./",
   "scripts": {
     "start": "node ./server.js",
-    "dev": "nodemon --inspect server.js",
+    "server": "modemon --inspect ./src/server/server.js",
+    "dev": "nodemon --inspect ./src/server/server.js",
     "pretest": "eslint --ignore-path .gitignore ."
   },
   "author": "",

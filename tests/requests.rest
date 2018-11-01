@@ -1,4 +1,5 @@
-@base = http://localhost:9000
+#@base = http://localhost:9000
+@base = http://192.168.11.247:3000
 
 ### REST Client in VS Code will process this
 
@@ -27,3 +28,6 @@ GET {{base}}/devicelibrary
 
 ###
 GET {{base}}/devicelibrary/button
+
+###
+POST {{base}}/device/usr1/on

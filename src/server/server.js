@@ -1,14 +1,19 @@
+// importing here triggers it to load up devices and will show errors faster
+var dm = require('./services/deviceManager')
+
+var settings = require('./config/config')
+
 var http = require('http');
 var express = require('express');
 var application = express();
 var bodyParser = require('body-parser');
-var routeConfig = require('./route-config');
-var settingsConfig = require('./settings/settings-config');
+var routeConfig = require('./routes/route-config');
+var settings = require('./config/config.json');
 
 function configureWorker(application) {
   configureApplication(application);
   configureRoutes(application);
-
+  
   startServer(application);
 }
 
@@ -31,8 +36,8 @@ function configureRoutes(application) {
 function startServer(application) {
   var server = http.createServer(application);
 
-  server.listen(settingsConfig.settings.workerPort, settingsConfig.settings.hostName, settingsConfig.settings.queueLength, function() {
-    console.log('listening at http://%s:%s', settingsConfig.settings.hostName, settingsConfig.settings.workerPort);
+  server.listen(settings.workerPort, settings.hostName, settings.queueLength, function() {
+    console.log('listening at http://%s:%s', settings.hostName, settings.workerPort);
   });
 }
 
