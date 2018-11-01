@@ -21,7 +21,7 @@ module.exports = (function() {
         }
         
         _NewDevice(data){
-                this.Devices[data.name] = this.DeviceLibrary[data.type].Create(data.name,data.pin)
+                this.Devices[data.name] = this.DeviceLibrary[data.type].Create(data.name,data.cfg)
         }
     
     }

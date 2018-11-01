@@ -1,20 +1,19 @@
 var dm = require('../../services/deviceManager')
 
-function devicelibrary() {
+function deviceLibrary() {
 }
 
-function get(req, res, next) {
+function get(req, res) {
   
   let lib = dm.DeviceLibrary
-  console.log(Object.getOwnPropertyNames(lib))
   
   res.status(200).json(Object.getOwnPropertyNames(lib));
 }
 
-devicelibrary.prototype = {
+deviceLibrary.prototype = {
   get: get
 };
 
-var devicelibrary = new devicelibrary();
+var devicelibrary = new deviceLibrary();
 
 module.exports = devicelibrary;

@@ -1,9 +1,9 @@
 var Adapter = require('../../adapters');
 
-module.exports = function(name,pin){
+module.exports = function(name,cfg){
     
 
-    let writer = Adapter.Write(name,pin)
+    let writer = Adapter.Write(name,cfg)
     const type = "LED"
 
     const state = () => { 
@@ -11,7 +11,6 @@ module.exports = function(name,pin){
         return rtn;
     }
     const on = () =>{
-        console.log('led on')
         writer.on();
     }
 
@@ -23,5 +22,5 @@ module.exports = function(name,pin){
         writer.toggle()
     }
 
-    return {name,pin,type,state,on,off,toggle}
+    return {name,cfg,type,state,on,off,toggle}
 }

@@ -1,9 +1,10 @@
 var b = require('bonescript');
 
 module.exports =  class Output {
-    constructor(name,pin){
+    constructor(name,cfg){
         this.name=name;
-        this.pin=pin;
+        //todo: validate cfg
+        this.pin=cfg.pin;
         this.value=null;
 
         b.pinMode(this.pin,b.OUTPUT)

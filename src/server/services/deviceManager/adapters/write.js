@@ -2,9 +2,9 @@ module.exports = (platform) => {
 
     const createAdapter = require(platform);
 
-    return function (name, pin) {
+    return function (name, cfg) {
 
-        const adapter = createAdapter.Write(name, pin)
+        const adapter = createAdapter.Write(name, cfg)
         let lastUpdate = adapter.lastUpdate
         const get = adapter.get
 
@@ -19,6 +19,6 @@ module.exports = (platform) => {
         }
 
 
-        return { name, pin, on, off, toggle, lastUpdate, get }
+        return { name, cfg, on, off, toggle, lastUpdate, get }
     }
 }

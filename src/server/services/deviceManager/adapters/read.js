@@ -2,9 +2,9 @@ module.exports = (platform) => {
 
     const createAdapter = require(platform)
 
-    return function (name, pin) {
+    return function (name, cfg) {
 
-        let adapter = createAdapter.Read(name,pin)
+        let adapter = createAdapter.Read(name,cfg)
         
         return adapter
     }

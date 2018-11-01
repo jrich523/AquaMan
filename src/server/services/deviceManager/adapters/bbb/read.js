@@ -1,9 +1,10 @@
 var b = require('bonescript');
 
 module.exports =  class Input {
-    constructor(name,pin){
+    constructor(name,cfg){
         this.name=name;
-        this.pin=pin;
+        //todo: validate cfg
+        this.pin=cfg.pin;
         this.value=null;
         this._timer = null
         

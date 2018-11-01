@@ -2,12 +2,12 @@
 	"platform" : "mock",
 	"latyout" : "should make the 'pin' a 'conn' and let it be a custom obj for adp",
 	"devices": [
-		{"name": "btn1","type": "button", "pin": "P8_9"  },
-		{"name": "btn2", "type": "button", "pin": "p8_10" },
-		{"name": "usr0", "type": "LED",    "pin": "USR0"  },
-		{"name": "usr1", "type": "LED",    "pin": "USR1"  },
-		{"name": "usr2", "type": "LED",    "pin": "USR2"  },
-		{"name": "usr3", "type": "LED",    "pin": "USR3"  },
-		{"name": "usr0", "type": "LED",    "pin": "USR0"  }
+		{"name": "btn1","type": "button", "cfg": {"pin": "P8_9" } },
+		{"name": "btn2", "type": "button", "cfg": { "pin": "p8_10" }},
+		{"name": "usr0", "type": "LED",    "cfg": { "pin": "USR0"  }},
+		{"name": "usr1", "type": "LED",    "cfg": { "pin": "USR1"  }},
+		{"name": "usr2", "type": "LED",    "cfg": { "pin": "USR2"  }},
+		{"name": "usr3", "type": "LED",    "cfg": { "pin": "USR3"  }},
+		{"name": "usr0", "type": "LED",    "cfg": { "pin": "USR0"  }}
 	]
 }

@@ -11,7 +11,6 @@ module.exports = function(){
         const lib = dm.DeviceLibrary
         const type = lib[id]
         
-        console.log(type.API)
         res.status(200).json( type.API);
     }
 

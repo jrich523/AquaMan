@@ -1,10 +1,9 @@
-module.exports = function (name, pin, defaultState) {
+module.exports = function (name, cfg, defaultState) {
 
     let value;
     let updateStamp = new Date();
 
     let on = function () {
-        console.log('writer - on')
         value = true;
     }
 
@@ -32,6 +31,6 @@ module.exports = function (name, pin, defaultState) {
         off()
     }
 
-    return { name, pin, lastUpdate, get, on, off, toggle }
+    return { name, cfg, lastUpdate, get, on, off, toggle }
 }
 

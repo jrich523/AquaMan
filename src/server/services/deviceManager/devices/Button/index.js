@@ -1,4 +1,4 @@
 module.exports = {
-    Create: require('./component'),
+    Create: require('./create'),
     API: require('./api')
 }

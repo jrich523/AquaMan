@@ -1,12 +1,12 @@
 var Adapter = require('../../adapters');
 
-module.exports = (name,pin) => {
+module.exports = (name,cfg) => {
 
-    let reader = Adapter.Read(name,pin)
+    let reader = Adapter.Read(name,cfg)
     const type = "Button"
     const state = () => { 
         const rtn = reader.get();
         return rtn;
     }
-    return { name,pin,type,state}
+    return { name,cfg,type,state}
 }

@@ -1,4 +1,4 @@
-module.exports = function (name, pin) {
+module.exports = function (name, cfg) {
 
     //probably want to default this to null on real hardware
     let value = true
@@ -25,6 +25,6 @@ module.exports = function (name, pin) {
     update()
     setInterval(update,5000)
 
-    return { name, pin, lastUpdate, update, get }
+    return { name, cfg, lastUpdate, update, get }
 }
 
