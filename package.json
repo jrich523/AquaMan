@@ -4,7 +4,7 @@
   "description": "Aquaponics Management System",
   "main": "./",
   "scripts": {
-    "start": "node ./server.js",
+    "start": "node ./src/server/server.js",
     "server": "modemon --inspect ./src/server/server.js",
     "dev": "nodemon --inspect ./src/server/server.js",
     "pretest": "eslint --ignore-path .gitignore ."
