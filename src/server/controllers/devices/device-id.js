@@ -20,7 +20,8 @@ module.exports = function () {
             res.status(200).json({
                 name: d.name,
                 pin: d.pin,
-                state: state
+                state: state,
+                lastUpdate: d.lastUpdate
             });
         }
     }

@@ -12,12 +12,14 @@ module.exports =  function (name,cfg){
 
     let on = () => {
         // dont bother checking, just set incase
+        console.log('Going HIGH on ' + cfg.pin)
         b.digitalWrite(cfg.pin, b.HIGH)
         value = true
         update()
     }
 
     let off = () => {
+        console.log('Going LOW on ' + cfg.pin)
         b.digitalWrite(cfg.pin, b.LOW)
         value = false
         update()

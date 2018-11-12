@@ -25,6 +25,6 @@ module.exports = function (name, cfg) {
     update()
     setInterval(update,5000)
 
-    return { name, cfg, lastUpdate, update, get }
+    return { name, cfg, lastUpdate, get }
 }
 
