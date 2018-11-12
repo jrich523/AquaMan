@@ -1,29 +1,24 @@
 var b = require('bonescript');
 
-module.exports =  class Input {
-    constructor(name,cfg){
-        this.name=name;
-        //todo: validate cfg
-        this.pin=cfg.pin;
-        this.value=null;
-        this._timer = null
-        
-        b.pinMode(this.pin,b.INPUT)
-        b.attachInterrupt(this.pin, true, b.CHANGE, (x) =>{
-            if(x.value != this.value) {
-                this.value = x.value
-                console.log(this.name + ': switch state updated to ' + this.value)
-            }
-        })
-        /*
-        this._timer = setInterval( ()=> {
-            this._value = !this.value
-            console.log('input _value updated')
-        }, 1000)
-        */
-    }
+module.exports =  function (name,cfg) {
+    //todo: validate cfg
 
-    stop() {
-        clearInterval(this._timer)
+     let value=null;
+     let lastUpdate = new Date();
+    
+    b.pinMode(cfg.pin,b.INPUT)
+    b.attachInterrupt(cfg.pin, true, b.CHANGE, (x) =>{
+        if(x.value != value) {
+            value = x.value
+            lastUpdate = new Date();
+            console.log(this.name + ': switch state updated to ' + this.value)
+        }
+    })
+
+    const get = () => {
+        return value
     }
+    
+    return { name, cfg, lastUpdate, get }
 }
+

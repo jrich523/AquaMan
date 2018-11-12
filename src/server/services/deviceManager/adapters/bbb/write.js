@@ -1,34 +1,45 @@
 var b = require('bonescript');
 
-module.exports =  class Output {
-    constructor(name,cfg){
-        this.name=name;
-        //todo: validate cfg
-        this.pin=cfg.pin;
-        this.value=null;
-
+module.exports =  function (name,cfg){
+        let value=null;
+        let updateStamp = new Date()
         b.pinMode(this.pin,b.OUTPUT)
+
     
+    let get = () => {
+        return value;
     }
-    get state() {
-        return this.value;
+
+    let on = () => {
+        // dont bother checking, just set incase
+        b.digitalWrite(cfg.pin, b.HIGH)
+        value = true
+        update()
     }
-    set state(v) {
-        if(v != this.value){
-            if(v){
-                
-                console.log(this.name + ': state Set high')
-                this.value = true
-                //bonescript: set high
-                b.digitalWrite(this.pin,b.HIGH)
-                
-            }
-            else{
-                console.log(this.name + ': state Set low')
-                this.value = false
-                //bonescript: low
-                b.digitalWrite(this.pin,b.LOW)
-            }
-        }
+
+    let off = () => {
+        b.digitalWrite(cfg.pin, b.LOW)
+        value = false
+        update()
     }
+    
+    let toggle = () => {
+        if(value === true) //todo: check for proper check type
+            on()
+        else
+            off()
+    }
+
+    let lastUpdate = () => {
+        return updateStamp
+    }
+
+
+    // private
+
+    let update = () => {
+        updateStamp = new Date()
+    }
+
+    return { name, cfg, lastUpdate, get, on, off, toggle}
 }
