@@ -27,9 +27,9 @@ module.exports =  function (name,cfg){
     
     let toggle = () => {
         if(value === true) //todo: check for proper check type
-            on()
-        else
             off()
+        else
+            on()
     }
 
     let lastUpdate = () => {
