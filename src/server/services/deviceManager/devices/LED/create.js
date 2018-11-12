@@ -22,5 +22,9 @@ module.exports = function(name,cfg){
         writer.toggle()
     }
 
-    return {name,cfg,type,state,on,off,toggle}
+    const lastUpdate = () => {
+        return writer.lastUpdate()
+    }
+
+    return {name,cfg,type,state,on,off,toggle,lastUpdate}
 }

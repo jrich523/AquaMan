@@ -11,7 +11,7 @@ module.exports = function () {
 
         const d = (dm.Devices[id])
         const state = d.state();
-
+        const dt = d.lastUpdate();
         if (d === undefined) {
             res.status(404).send('Device not found')
         }
@@ -19,9 +19,9 @@ module.exports = function () {
         {
             res.status(200).json({
                 name: d.name,
-                pin: d.pin,
+                pin: d.cfg.pin,
                 state: state,
-                lastUpdate: d.lastUpdate
+                lastUpdate: dt
             });
         }
     }
