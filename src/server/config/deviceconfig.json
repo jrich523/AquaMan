@@ -4,10 +4,9 @@
 	"devices": [
 		{"name": "btn1","type": "button", "cfg": {"pin": "P8_9" } },
 		{"name": "btn2", "type": "button", "cfg": { "pin": "p8_10" }},
-		{"name": "usr0", "type": "LED",    "cfg": { "pin": "USR0"  }},
-		{"name": "usr1", "type": "LED",    "cfg": { "pin": "USR1"  }},
-		{"name": "usr2", "type": "LED",    "cfg": { "pin": "USR2"  }},
-		{"name": "usr3", "type": "LED",    "cfg": { "pin": "USR3"  }},
-		{"name": "usr0", "type": "LED",    "cfg": { "pin": "USR0"  }}
+		{"name": "usr0", "type": "toggle",    "cfg": { "pin": "USR0"  }},
+		{"name": "usr1", "type": "toggle",    "cfg": { "pin": "USR1"  }},
+		{"name": "usr2", "type": "toggle",    "cfg": { "pin": "USR2"  }},
+		{"name": "usr3", "type": "toggle",    "cfg": { "pin": "USR3"  }}
 	]
 }

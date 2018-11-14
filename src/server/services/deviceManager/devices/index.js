@@ -1,6 +1,6 @@
 var deviceLibrary = {
-    button: require('./Button'),
-    LED: require('./LED')
+    button: require('./button'),
+    toggle: require('./toggle')
 }
 
 module.exports = deviceLibrary
