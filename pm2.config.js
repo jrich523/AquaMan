@@ -28,7 +28,7 @@ module.exports = {
     },
     development : {
       user : 'debian',
-      host : '0.0.0.0',
+      host : 'localhost',
       ref  : 'origin/master',
       repo : 'https://github.com/jrich523/AquaMan.git',
       path : '/opt/apps/aquaman',

@@ -22,7 +22,6 @@ The configuration of devices is located in `/app/config/deviceconfig.json` and j
 }
 ```
 
-
 ## Device Library
 
 The simplicity of device configuration is relient upon a "driver" so to speak, which all live in `/app/services/deviceManager/devices` each folder is a device type. Currently each device type inherits from the Input/Output classes so it should be very easy to create new devices.
@@ -40,3 +39,9 @@ https://github.com/wahengchang/nodejs-cron-job-must-know
 
 Meteor for framework (replaces express? easy to have front/back on their own)
 Phusion Passanger or PM 2
+
+## setup (ansible)
+
+sudo -i
+apt-get update
+apt-get install ansible

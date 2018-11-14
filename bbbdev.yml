@@ -1,7 +1,0 @@
----
-  - hosts: local
-    task:
-     - name: install Samba
-       apt:
-        name: Samba
-        update_cache: yes
