@@ -2,7 +2,6 @@
 
 Aqua/Hydro-ponics system automation built on a BeagleBone Black. Essentially a rule processing system for hardware.
 
-
 ## Configurations
 
 The configuration of devices is located in `/app/config/deviceconfig.json` and just requires 3 peices of information.
@@ -13,12 +12,12 @@ The configuration of devices is located in `/app/config/deviceconfig.json` and j
 
 ```json
 {
-	"devices": [
-		{"name": "btn1","type": "button", "pin": "P8_9"  },
-		{"name": "usr0", "type": "LED",    "pin": "USR0"  },
-		{"name": "usr1", "type": "LED",    "pin": "USR1"  },
-		{"name": "usr0", "type": "LED",    "pin": "USR0"  }
-	]
+  "devices": [
+    {"name": "btn1","type": "button", "pin": "P8_9"  },
+    {"name": "usr0", "type": "LED",    "pin": "USR0"  },
+    {"name": "usr1", "type": "LED",    "pin": "USR1"  },
+    {"name": "usr0", "type": "LED",    "pin": "USR0"  }
+  ]
 }
 ```
 
@@ -32,8 +31,6 @@ FIGURE OUT HOW TO MOCK CORRECTLY
 
 Its not there yet, but i'll get there!
 https://github.com/wahengchang/nodejs-cron-job-must-know
-
-
 
 ## Notes
 

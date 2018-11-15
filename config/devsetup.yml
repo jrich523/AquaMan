@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   become: true
   pre_tasks:
     - name: Ensure package database is up-to-date
@@ -15,8 +15,6 @@
         append: true
       with_items:
         - usr1
-        - usr2
-        - timemachine
 
   vars:
     samba_netbios_name: SAMBA_TEST
@@ -59,4 +57,4 @@
         setype: public_content_t
         browseable: 'yes'
   roles:
-    - role_under_test
+    - samba
