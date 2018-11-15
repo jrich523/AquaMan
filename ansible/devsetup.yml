@@ -15,11 +15,6 @@
         append: true
       with_items:
         - usr1
-    - name: Disable Firewall
-      service:
-        name: firewalld
-        state: stopped
-        enabled: False
 
   vars:
     samba_netbios_name: SAMBA_TEST
@@ -60,5 +55,6 @@
         group: root
         setype: public_content_t
         browseable: 'yes'
+        writable: 'yes'
   roles:
     - samba
